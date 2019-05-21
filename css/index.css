@@ -168,4 +168,145 @@ h5 {
 p {
   font-size: 1.6rem;
 }
+.container {
+  width: inherit;
+  height: inherit;
+}
+a {
+  text-decoration: none;
+  color: #333333;
+}
+.navigation {
+  width: 100%;
+  transition: all 0.5s ease-in-out;
+  position: fixed;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
+}
+.navigation .navbar {
+  width: 100%;
+  height: 72px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 999;
+}
+@media (max-width: 500px) {
+  .navigation .navbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    height: 100%;
+  }
+}
+.navigation .navbar .nav-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  position: absolute;
+  left: 60px;
+}
+@media (max-width: 500px) {
+  .navigation .navbar .nav-header {
+    position: relative;
+    left: 0;
+    justify-content: space-between;
+    width: 100%;
+    padding: 2rem;
+  }
+}
+.navigation .navbar .nav-header .nav-toggle {
+  width: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  display: none;
+  border: 1px solid #333333;
+  padding: 0.6rem;
+  border-radius: 3px;
+}
+.navigation .navbar .nav-header .nav-toggle .bar {
+  height: 2px;
+  background: #333333;
+  margin: 2px auto;
+  width: 100%;
+}
+@media (max-width: 500px) {
+  .navigation .navbar .nav-header .nav-toggle {
+    display: flex;
+  }
+}
+.navigation .navbar .nav-header .logo h1 a {
+  text-transform: uppercase;
+}
+.navigation .navbar .nav-items {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 100%;
+  position: absolute;
+  right: 400px;
+  line-height: 3.3;
+}
+@media (max-width: 500px) {
+  .navigation .navbar .nav-items {
+    position: relative;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    display: none;
+    width: 100%;
+  }
+}
+.navigation .navbar .nav-items li {
+  padding: 0.8rem 2rem;
+}
+.navigation .navbar .nav-items li.active,
+.navigation .navbar .nav-items li:hover {
+  border-bottom: 3px solid #1BA39C;
+  background-color: #f3f4f4;
+}
+@media (max-width: 500px) {
+  .navigation .navbar .nav-items li {
+    width: 100%;
+    text-align: center;
+    padding: 0;
+  }
+}
+.navigation .navbar .nav-items li.active a {
+  color: #1BA39C;
+}
+.navigation .navbar .nav-items li a {
+  font-size: 1.6rem;
+  font-family: 'Open Sans', sans-serif;
+  padding-bottom: 2.5rem;
+  text-transform: uppercase;
+  -webkit-transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
+  -ms-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+.navigation .navbar .nav-items li a:hover {
+  color: #1BA39C;
+}
+.navigation .navbar .nav-items.open {
+  display: flex;
+}
 /* My styles starts here */
