@@ -179,7 +179,6 @@ a {
 .navigation {
   width: 100%;
   transition: all 0.5s ease-in-out;
-  position: fixed;
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
 }
 .navigation .navbar {
@@ -281,6 +280,11 @@ a {
 .navigation .navbar .nav-items li:hover {
   border-bottom: 3px solid #1BA39C;
   background-color: #f3f4f4;
+  -webkit-transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
+  -ms-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
+  transition: all 0.25s ease;
 }
 @media (max-width: 500px) {
   .navigation .navbar .nav-items li {
@@ -308,5 +312,135 @@ a {
 }
 .navigation .navbar .nav-items.open {
   display: flex;
+}
+.carousel {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 500px;
+  position: fixed;
+  overflow: hidden;
+  top: 72px;
+}
+@media (max-width: 500px) {
+  .carousel {
+    position: relative;
+    top: 0;
+    height: 250px;
+  }
+}
+.carousel .left-button,
+.carousel .right-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  color: #fff;
+  background-color: #1BA39C;
+  font-size: 40px;
+  border-radius: 50%;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  transition: all 0.25s ease-in-out;
+  cursor: pointer;
+}
+@media (max-width: 500px) {
+  .carousel .left-button,
+  .carousel .right-button {
+    display: none;
+  }
+}
+.carousel .left-button:hover,
+.carousel .right-button:hover {
+  color: #fff;
+  background-color: #333333;
+  border: 2px solid #fff;
+  transition: all 0.25s ease-in-out;
+}
+.carousel .left-button {
+  top: 50%;
+  left: 25px;
+  transform: translate(0, -50%);
+}
+.carousel .right-button {
+  top: 50%;
+  right: 25px;
+  transform: translate(0, -50%);
+}
+.carousel .carousel-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.carousel .carousel-item img {
+  width: 100%;
+  display: flex;
+  object-fit: contain;
+}
+@media (max-width: 500px) {
+  .carousel .carousel-item img {
+    position: absolute;
+    top: 0;
+  }
+}
+.carousel .carousel-item .carousel-text {
+  position: absolute;
+  bottom: 30%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 70%;
+  color: #a6a8a8;
+}
+@media (max-width: 500px) {
+  .carousel .carousel-item .carousel-text {
+    display: none;
+  }
+}
+.carousel .carousel-item .carousel-text h1 {
+  margin-bottom: 4rem;
+  color: #a6a8a8;
+  font-size: 4rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #fff;
+  text-align: center;
+}
+.carousel .carousel-item .carousel-text p {
+  font-size: 2rem;
+  line-height: 1.2;
+  font-weight: 400;
+  text-shadow: 1px 1px 3px #666666;
+  color: white;
+}
+.carousel .carousel-item .carousel-text .get-started {
+  margin-top: 4rem;
+  width: 180px;
+  height: 57px;
+  padding: 1rem 2rem;
+  background-color: #fff;
+  text-align: center;
+  line-height: 35px;
+  font-weight: 400;
+  font-size: 1.8rem;
+  color: #1BA39C;
+  border-radius: 6px;
+  text-transform: uppercase;
+  transition: all 0.25s ease-in-out;
+}
+.carousel .carousel-item .carousel-text .get-started:hover {
+  background: #333333;
+  border: 2px solid #fff;
+  color: #fff;
+  transition: all 0.25s ease-in-out;
 }
 /* My styles starts here */
