@@ -1,0 +1,32 @@
+.main {
+  .flex();
+  flex-wrap: nowrap;
+  position: relative;
+  top: 500px;
+  height: 350px;
+  @media @mobile {
+    top: 0;
+    margin-top: 0;
+    height: 500px;
+  }
+  background-color: @primary;
+  article {
+    width: 60%;
+    margin: auto;
+    padding: 2rem;
+    .flex(column);
+    color: @white;
+    p{
+      line-height: 1.5;
+      text-align: justify;
+      padding-top: 2rem;
+    }
+    .get-started {
+      .get-started();
+    };
+  
+    @media @mobile {
+      width: 100%;
+    }
+  }
+}

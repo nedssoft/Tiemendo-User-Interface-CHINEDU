@@ -124,6 +124,27 @@ table {
   border-spacing: 0;
 }
 /* ============ My styles styles starts here ==============*/
+.get-started {
+  margin-top: 4rem;
+  width: 180px;
+  height: 57px;
+  padding: 1rem 2rem;
+  background-color: #fff;
+  text-align: center;
+  line-height: 35px;
+  font-weight: 400;
+  font-size: 1.8rem;
+  color: #1BA39C;
+  border-radius: 6px;
+  text-transform: uppercase;
+  transition: all 0.25s ease-in-out;
+}
+.get-started:hover {
+  background: #333333;
+  border: 2px solid #fff;
+  color: #fff;
+  transition: all 0.25s ease-in-out;
+}
 html,
 body {
   width: 100vw;
@@ -179,7 +200,13 @@ a {
 .navigation {
   width: 100%;
   transition: all 0.5s ease-in-out;
+  position: fixed;
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
+}
+@media (max-width: 500px) {
+  .navigation {
+    position: relative;
+  }
 }
 .navigation .navbar {
   width: 100%;
@@ -442,5 +469,66 @@ a {
   border: 2px solid #fff;
   color: #fff;
   transition: all 0.25s ease-in-out;
+}
+.main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  position: relative;
+  top: 500px;
+  height: 350px;
+  background-color: #1BA39C;
+}
+@media (max-width: 500px) {
+  .main {
+    top: 0;
+    margin-top: 0;
+    height: 500px;
+  }
+}
+.main article {
+  width: 60%;
+  margin: auto;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  color: #fff;
+}
+.main article p {
+  line-height: 1.5;
+  text-align: justify;
+  padding-top: 2rem;
+}
+.main article .get-started {
+  margin-top: 4rem;
+  width: 180px;
+  height: 57px;
+  padding: 1rem 2rem;
+  background-color: #fff;
+  text-align: center;
+  line-height: 35px;
+  font-weight: 400;
+  font-size: 1.8rem;
+  color: #1BA39C;
+  border-radius: 6px;
+  text-transform: uppercase;
+  transition: all 0.25s ease-in-out;
+}
+.main article .get-started:hover {
+  background: #333333;
+  border: 2px solid #fff;
+  color: #fff;
+  transition: all 0.25s ease-in-out;
+}
+@media (max-width: 500px) {
+  .main article {
+    width: 100%;
+  }
 }
 /* My styles starts here */
