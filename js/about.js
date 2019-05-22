@@ -88,6 +88,7 @@ class About {
     const cardContent = this.createElement('div', 'card-content')
     const h3 = document.createElement('h2');
     h3.textContent = this.data.name;
+    profile.setAttribute('data-aos', 'flip-up')
     profile.appendChild(aboutCard);
     profile.appendChild(h3);
     cardContent.appendChild(this.constructParagraph());

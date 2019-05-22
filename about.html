@@ -11,13 +11,15 @@
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
     integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <link rel="stylesheet" href="css/index.css">
   <script defer src="js/about.js"></script>
   <script defer src="js/navigation.js"></script>
 </head>
 
-<body>
+<body data-aos="zoom-out">
   <div class="container">
     <header class="navigation" role="navigation">
       <nav class="navbar">
@@ -60,5 +62,8 @@
       </ul>
       <p> &copy; Copyright Lambda School. All Rights Reserved.</p>
     </footer>
+    <script>
+        AOS.init();
+      </script>
 </body>
 </html>

@@ -885,7 +885,7 @@ footer p {
 @media (max-width: 500px) {
   .about-container .about-section .about-content .profile {
     width: 100%;
-    margin: 0;
+    margin: 3rem 0;
   }
 }
 .about-container .about-section .about-content .profile h2 {
