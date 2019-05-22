@@ -1,0 +1,35 @@
+footer {
+  width: 100%;
+  min-height: 150px;
+  background: @black;
+  padding: 2rem;
+  .flex(column);
+  color: @silver-text;
+  .social {
+    .flex();
+    li a i {
+      font-size: 6rem;
+      color: @silver-text;
+      padding: 2rem;
+      .transition();
+      &.twitter:hover {
+        color     : @twitterColor;
+        transition: .5s ease-in-out;
+      }
+
+      &.facebook:hover {
+        color     : @facebookColor;
+        transition: .5s ease-in-out;
+      }
+
+      &.linkedin:hover {
+        color     : @linkedinColor;
+        transition: .5s ease-in-out;
+      }
+    }
+  }
+  p {
+    margin: 2rem auto;
+    text-align: center;
+  }
+}
