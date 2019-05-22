@@ -1,0 +1,196 @@
+.about-container {
+  font-family      : 'Work Sans', sans-serif;
+  position         : relative;
+  top              : 72px;
+  margin-bottom: 7.2rem;
+  background-color: @primary;
+  -webkit-clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+  clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+  color: @white;
+  @media @mobile {
+    top   : 0;
+    clip-path: none;
+    width: 100%;
+    margin: 0;
+  }
+  .about-section {
+    .flex(column);
+    flex-wrap: nowrap;
+    padding  : 4rem 2rem;
+    @media @mobile {
+      width: 100%;
+      margin: 0;
+      
+    }
+    .about-content {
+      .flex();
+      .profile {
+        .flex(column);
+        margin-top: 3rem;
+        @media @mobile {
+          width: 100%;
+          margin: 0;
+        }
+
+        h2 {
+          margin       : 1rem auto;
+          padding      : 0.8rem 1rem;
+          border-bottom: 1px solid @white;
+          font-size    : 3rem;
+        }
+
+        .about-card {
+          width : 350px;
+          height: 300px;
+          margin: 1rem;
+          .flex();
+          box-shadow       : 0px 3px 5px 1px rgba(48, 37, 37, 0.459);
+          border-radius    : 6px;
+          background-repeat: no-repeat;
+          background-size  : 100% 100%;
+
+          @media @mobile {
+            width : 100%;
+            margin: auto;
+          }
+
+          transition: 0.2s ease-in-out;
+
+          &:hover {
+            transform : scale(1.03, 1);
+            transition: 0.2s ease-in-out;
+          }
+
+          .card-content {
+            .flex(column);
+            display         : none;
+            background-color: rgba(70, 46, 46, 0.459);
+            border-radius   : 6px;
+
+            h3 {
+              font-size: 2.5rem;
+              padding  : 1rem 0;
+            }
+
+            p {
+              margin-top: 2rem;
+              color     : white;
+              text-align: center;
+              font-size: 2.5rem;
+            }
+
+            .social {
+              margin-top: 2rem;
+
+              ul {
+                .flex();
+                margin-top: 2rem;
+
+                li {
+                  padding: 1rem;
+
+                  a {
+                    text-decoration: none;
+
+                    i {
+                      font-size: 4rem;
+                      color    : white;
+
+                      &.twitter:hover {
+                        color     : @twitterColor;
+                        transition: .5s ease-in-out;
+                        animation : twitter 1s infinite;
+                      }
+
+                      &.facebook:hover {
+                        color     : @facebookColor;
+                        transition: .5s ease-in-out;
+                        animation : facebook 1s infinite;
+
+                      }
+
+                      &.linkedin:hover {
+                        color     : @linkedinColor;
+                        transition: .5s ease-in-out;
+                        animation : linkedin 1s infinite;
+                      }
+
+                      &.github:hover {
+                        color     : @githubColor;
+                        transition: .5s ease-in-out;
+                        animation : github 1s infinite;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+
+        }
+      }
+    }
+  }
+
+  h1 {
+    font-size     : 3rem;
+    margin-bottom : 4rem;
+    padding-bottom: 1rem;
+    border-bottom : 1px solid white;
+    font-weight   : bold;
+    text-align    : center;
+  }
+
+  article{
+    margin-bottom: 3rem;
+    p{
+      line-height: 1.5;
+      font-size: 2rem;
+      text-align: center;
+      @media @mobile {
+        text-align: justify;
+      }
+    }
+  }
+
+}
+
+@keyframes facebook {
+  from {
+    color: white;
+  }
+
+  to {
+    color: @facebookColor;
+  }
+}
+
+@keyframes twitter {
+  from {
+    color: white;
+  }
+
+  to {
+    color: @twitterColor;
+  }
+}
+
+@keyframes github {
+  from {
+    color: white;
+  }
+
+  to {
+    color: @githubColor;
+  }
+}
+
+@keyframes linkedin {
+  from {
+    color: white;
+  }
+
+  to {
+    color: @linkedinColor;
+  }
+}

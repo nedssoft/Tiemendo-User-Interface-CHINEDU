@@ -202,6 +202,7 @@ a {
   transition: all 0.5s ease-in-out;
   position: fixed;
   z-index: 1000;
+  top: 0;
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
 }
 @media (max-width: 500px) {
@@ -219,7 +220,6 @@ a {
   align-items: center;
   flex-wrap: wrap;
   position: relative;
-  z-index: 999;
 }
 @media (max-width: 500px) {
   .navigation .navbar {
@@ -744,5 +744,204 @@ footer .social li a i.linkedin:hover {
 footer p {
   margin: 2rem auto;
   text-align: center;
+}
+.about-container {
+  font-family: 'Work Sans', sans-serif;
+  position: relative;
+  top: 72px;
+  margin-bottom: 7.2rem;
+  background-color: #1BA39C;
+  -webkit-clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+  clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+  color: #fff;
+}
+@media (max-width: 500px) {
+  .about-container {
+    top: 0;
+    clip-path: none;
+    width: 100%;
+    margin: 0;
+  }
+}
+.about-container .about-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  padding: 4rem 2rem;
+}
+@media (max-width: 500px) {
+  .about-container .about-section {
+    width: 100%;
+    margin: 0;
+  }
+}
+.about-container .about-section .about-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.about-container .about-section .about-content .profile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 3rem;
+}
+@media (max-width: 500px) {
+  .about-container .about-section .about-content .profile {
+    width: 100%;
+    margin: 0;
+  }
+}
+.about-container .about-section .about-content .profile h2 {
+  margin: 1rem auto;
+  padding: 0.8rem 1rem;
+  border-bottom: 1px solid #fff;
+  font-size: 3rem;
+}
+.about-container .about-section .about-content .profile .about-card {
+  width: 350px;
+  height: 300px;
+  margin: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  box-shadow: 0px 3px 5px 1px rgba(48, 37, 37, 0.459);
+  border-radius: 6px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  transition: 0.2s ease-in-out;
+}
+@media (max-width: 500px) {
+  .about-container .about-section .about-content .profile .about-card {
+    width: 100%;
+    margin: auto;
+  }
+}
+.about-container .about-section .about-content .profile .about-card:hover {
+  transform: scale(1.03, 1);
+  transition: 0.2s ease-in-out;
+}
+.about-container .about-section .about-content .profile .about-card .card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  display: none;
+  background-color: rgba(70, 46, 46, 0.459);
+  border-radius: 6px;
+}
+.about-container .about-section .about-content .profile .about-card .card-content h3 {
+  font-size: 2.5rem;
+  padding: 1rem 0;
+}
+.about-container .about-section .about-content .profile .about-card .card-content p {
+  margin-top: 2rem;
+  color: white;
+  text-align: center;
+  font-size: 2.5rem;
+}
+.about-container .about-section .about-content .profile .about-card .card-content .social {
+  margin-top: 2rem;
+}
+.about-container .about-section .about-content .profile .about-card .card-content .social ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+.about-container .about-section .about-content .profile .about-card .card-content .social ul li {
+  padding: 1rem;
+}
+.about-container .about-section .about-content .profile .about-card .card-content .social ul li a {
+  text-decoration: none;
+}
+.about-container .about-section .about-content .profile .about-card .card-content .social ul li a i {
+  font-size: 4rem;
+  color: white;
+}
+.about-container .about-section .about-content .profile .about-card .card-content .social ul li a i.twitter:hover {
+  color: #29AAE1;
+  transition: 0.5s ease-in-out;
+  animation: twitter 1s infinite;
+}
+.about-container .about-section .about-content .profile .about-card .card-content .social ul li a i.facebook:hover {
+  color: #3B579D;
+  transition: 0.5s ease-in-out;
+  animation: facebook 1s infinite;
+}
+.about-container .about-section .about-content .profile .about-card .card-content .social ul li a i.linkedin:hover {
+  color: #0374B3;
+  transition: 0.5s ease-in-out;
+  animation: linkedin 1s infinite;
+}
+.about-container .about-section .about-content .profile .about-card .card-content .social ul li a i.github:hover {
+  color: #161515;
+  transition: 0.5s ease-in-out;
+  animation: github 1s infinite;
+}
+.about-container h1 {
+  font-size: 3rem;
+  margin-bottom: 4rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid white;
+  font-weight: bold;
+  text-align: center;
+}
+.about-container article {
+  margin-bottom: 3rem;
+}
+.about-container article p {
+  line-height: 1.5;
+  font-size: 2rem;
+  text-align: center;
+}
+@media (max-width: 500px) {
+  .about-container article p {
+    text-align: justify;
+  }
+}
+@keyframes facebook {
+  from {
+    color: white;
+  }
+  to {
+    color: #3B579D;
+  }
+}
+@keyframes twitter {
+  from {
+    color: white;
+  }
+  to {
+    color: #29AAE1;
+  }
+}
+@keyframes github {
+  from {
+    color: white;
+  }
+  to {
+    color: #161515;
+  }
+}
+@keyframes linkedin {
+  from {
+    color: white;
+  }
+  to {
+    color: #0374B3;
+  }
 }
 /* My styles starts here */
