@@ -1,3 +1,4 @@
+TweenLite.defaultEase = Expo.easeOut;
 class Nav {
   constructor(el) {
     this.nav = el;

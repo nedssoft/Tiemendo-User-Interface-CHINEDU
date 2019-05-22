@@ -22,7 +22,6 @@
       .flex();
       position: absolute;
       left    : 60px;
-
       @media @mobile {
         position       : relative;
         left           : 0;
@@ -64,6 +63,9 @@
         .flex(column);
         display: none;
         .width-100();
+      }
+      @media (max-width: 960px) {
+        right: 20px;
       }
 
       li {

@@ -2,41 +2,61 @@
   font-family      : 'Work Sans', sans-serif;
   position         : relative;
   top              : 72px;
-  margin-bottom: 7.2rem;
-  background-color: @primary;
+  margin-bottom    : 7.2rem;
+  background-color : @primary;
   -webkit-clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
-  clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
-  color: @white;
-  @media @mobile {
-    top   : 0;
+  clip-path        : polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+  color            : @white;
+
+  @media (max-width: 968px) {
+    top      : 72px;
     clip-path: none;
-    width: 100%;
-    margin: 0;
+    width    : 100%;
   }
+  @media @mobile {
+    top      : 0;
+    clip-path: none;
+    width    : 100%;
+    margin   : 0;
+  }
+
   .about-section {
     .flex(column);
     flex-wrap: nowrap;
     padding  : 4rem 2rem;
+
     @media @mobile {
-      width: 100%;
+      width : 100%;
       margin: 0;
-      
+
     }
+
     .about-content {
       .flex();
+
       .profile {
         .flex(column);
         margin-top: 3rem;
+
         @media @mobile {
-          width: 100%;
+          width : 100%;
           margin: 0;
         }
 
         h2 {
-          margin       : 1rem auto;
-          padding      : 0.8rem 1rem;
-          border-bottom: 1px solid @white;
-          font-size    : 3rem;
+          margin   : 1rem auto;
+          padding  : 0.8rem 1rem;
+          font-size: 3rem;
+          position: relative;
+          &::after {
+            position        : absolute;
+            content         : '';
+            height          : 3px;
+            width           : 56px;
+            bottom          : 0;
+            left            : 20px;
+            background-color: @white;
+          }
         }
 
         .about-card {
@@ -76,7 +96,8 @@
               margin-top: 2rem;
               color     : white;
               text-align: center;
-              font-size: 2.5rem;
+              font-size : 2.5rem;
+              padding: 2rem;
             }
 
             .social {
@@ -136,17 +157,29 @@
     font-size     : 3rem;
     margin-bottom : 4rem;
     padding-bottom: 1rem;
-    border-bottom : 1px solid white;
     font-weight   : bold;
     text-align    : center;
+    position      : relative;
+
+    &::after {
+      content         : '';
+      position        : absolute;
+      height          : 3px;
+      width           : 60px;
+      background-color: @white;
+      bottom          : 0;
+      left            : 20px;
+    }
   }
 
-  article{
+  article {
     margin-bottom: 3rem;
-    p{
+
+    p {
       line-height: 1.5;
-      font-size: 2rem;
-      text-align: center;
+      font-size  : 2rem;
+      text-align : center;
+
       @media @mobile {
         text-align: justify;
       }

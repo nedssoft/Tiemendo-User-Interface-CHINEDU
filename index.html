@@ -5,13 +5,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Tieme Ndo is a platform that allows farmers to access loans and improved farm inputs without initial capital">
   <title>Tieme Ndo</title>
-  <link href='http://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800' rel='stylesheet'
+  <link href='https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800' rel='stylesheet'
     type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
     integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <link rel="stylesheet" href="css/index.css">
   <script defer src="js/carousel.js"></script>
   <script defer src="js/navigation.js"></script>
@@ -20,7 +23,7 @@
 
 <body>
   <div class="container">
-    <header class="navigation">
+    <header class="navigation" role="navigation">
       <nav class="navbar">
         <div class="nav-header">
           <div class="logo">
@@ -35,14 +38,14 @@
         <ul class="nav-items">
           <li class="active"><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
-          <li><a href="/login">Get Started</a></li>
+          <li><a href="/login">Login</a></li>
         </ul>
       </nav>
     </header>
     <div class="carousel">
       <div class="left-button">
         <</div> <div class="carousel-item">
-          <img src="./assets/img/farm1.jpg" />
+          <img src="./assets/img/farm1.jpg" alt="People harvesting crop" />
           <div class="carousel-text">
             <h1>Lorem1 ipsum dolor sit amet consectetur</h1>
             <p>Lorem ipsum, dolor sit amet consectetur Ullam quas necessitatibus nostrum accusamus facere molestiae
@@ -52,7 +55,7 @@
           </div>
       </div>
       <div class="carousel-item">
-        <img src="./assets/img/farm-mech.jpg" />
+        <img src="./assets/img/farm-mech.jpg" alt="tractor" />
         <div class="carousel-text">
           <h1>Lorem3 ipsum dolor sit amet consectetur</h1>
           <p>Lorem ipsum, dolor sit amet consectetur Ullam quas necessitatibus nostrum accusamus facere molestiae
@@ -62,7 +65,7 @@
         </div>
       </div>
       <div class="carousel-item">
-        <img src="./assets/img/cereal.jpg" />
+        <img src="./assets/img/cereal.jpg" alt="Cereal field" />
         <div class="carousel-text">
           <h1>Lorem4 ipsum dolor sit amet consectetur</h1>
           <p>Lorem ipsum, dolor sit amet consectetur Ullam quas necessitatibus nostrum accusamus facere molestiae
@@ -72,7 +75,7 @@
         </div>
       </div>
       <div class="carousel-item">
-        <img src="./assets/img/apples-close-up-colors-693794.jpg" />
+        <img src="./assets/img/apples-close-up-colors-693794.jpg" alt="apples-close-up-colors" />
         <div class="carousel-text">
           <h1>Lorem4 ipsum dolor sit amet consectetur</h1>
           <p>Lorem ipsum, dolor sit amet consectetur Ullam quas necessitatibus nostrum accusamus facere molestiae
@@ -82,7 +85,7 @@
         </div>
       </div>
       <div class="carousel-item">
-        <img src="./assets/img/adult-backyard-planting-crop-162637.jpg" />
+        <img src="./assets/img/adult-backyard-planting-crop-162637.jpg" alt="adult-backyard-planting-crop" />
         <div class="carousel-text">
           <h1>Lorem4 ipsum dolor sit amet consectetur</h1>
           <p>Lorem ipsum, dolor sit amet consectetur Ullam quas necessitatibus nostrum accusamus facere molestiae
@@ -92,7 +95,7 @@
         </div>
       </div>
       <div class="carousel-item">
-        <img src="./assets/img/agriculture-clouds-countryside-2131815.jpg" />
+        <img src="./assets/img/agriculture-clouds-countryside-2131815.jpg" alt="agriculture-clouds-countryside" />
         <div class="carousel-text">
           <h1>Lorem4 ipsum dolor sit amet consectetur</h1>
           <p>Lorem ipsum, dolor sit amet consectetur Ullam quas necessitatibus nostrum accusamus facere molestiae
@@ -126,7 +129,7 @@
                   empower farmers to take advantage of business opportunities along the agricultural value chain through
                   SAD (Small Agribusiness Development). The aim of SAD is to train farmers on entrepreneurship and value
                   addition.</p>
-                <a href="#" class="learn-more">More...</a>
+                <a href="#" class="learn-more" aria-expanded="false">More...</a>
               </article>
             </div>
             <div class="service">
@@ -138,7 +141,7 @@
                   field extension to enforce appropriate usage of inputs and implementation of good agricultural
                   practices. Without markets, farmers are less motivated to increase production – linking farmers to
                   favorable markets is our topmost priority.</p>
-                <a href="#" class="learn-more">More...</a>
+                <a href="#" class="learn-more" aria-expanded="false">More...</a>
               </article>
             </div>
             <div class="service">
@@ -149,7 +152,7 @@
                   assists rural farmers to access quality farming inputs in a timely manner. With this strategy, farmers
                   can improve their yield by harnessing these inputs, and food remains available, accessible, utilizable
                   and stable.</p>
-                <a href="#" class="learn-more">More...</a>
+                <a href="#" class="learn-more" aria-expanded="false">More...</a>
               </article>
             </div>
             <div class="service">
@@ -159,7 +162,7 @@
                   designed a formidable structure which enables the farmers to leverage on the power of numbers through
                   our farmers' cooperative society. Farmers who enrol in the Cooperative program have more opportunities
                   to more loans and assistance within the cooperative society.</p>
-                <a href="#" class="learn-more">More...</a>
+                <a href="#" class="learn-more" aria-expanded="false">More...</a>
               </article>
             </div>
           </div>
@@ -178,11 +181,11 @@
                 <p class="author">Orie Chinedu</p>
               </div>
 
-              <img src="assets/img/testimony.jpeg" alt="" width="100px" height="100px">
+              <img src="assets/img/testimony.jpeg" alt="Avartar of a testifier" width="100px" height="100px">
 
             </article>
             <article class="testimony reverse">
-              <img src="assets/img/testimony.jpeg" alt="" width="100px" height="100px">
+              <img src="assets/img/testimony.jpeg" alt="Avartar of a testifier" width="100px" height="100px">
               <div class="text-box">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis laudantium magni facilis saepe
                   libero corporis, reprehenderit quam suscipit laborum itaque illo cupiditate nemo tempora at,
@@ -203,7 +206,7 @@
                   reiciendis consequatur tempore ad in sunt. </p>
                 <p class="author">Orie Chinedu</p>
               </div>
-              <img src="assets/img/testimony.jpeg" alt="" width="100px" height="100px">
+              <img src="assets/img/testimony.jpeg" alt="Avartar of a testifier" width="100px" height="100px">
             </article>
           </div>
         </section>
@@ -218,6 +221,9 @@
       </section>
     </main>
   </div>
+  <script>
+    AOS.init();
+  </script>
 </body>
 
 </html>
