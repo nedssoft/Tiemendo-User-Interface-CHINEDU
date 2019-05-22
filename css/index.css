@@ -345,6 +345,7 @@ a {
 }
 .navigation .navbar .nav-items.open {
   display: flex;
+  transition: 2s ease-in-out;
 }
 .carousel {
   width: 100%;
