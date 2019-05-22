@@ -201,6 +201,7 @@ a {
   width: 100%;
   transition: all 0.5s ease-in-out;
   position: fixed;
+  z-index: 1000;
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
 }
 @media (max-width: 500px) {
@@ -356,7 +357,7 @@ a {
   .carousel {
     position: relative;
     top: 0;
-    height: 250px;
+    height: 240px;
   }
 }
 .carousel .left-button,
@@ -471,25 +472,31 @@ a {
   transition: all 0.25s ease-in-out;
 }
 .main {
+  position: relative;
+  top: 500px;
+}
+@media (max-width: 500px) {
+  .main {
+    top: 0;
+    margin-top: 0;
+  }
+}
+.main .mission-statement {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   flex-wrap: nowrap;
-  position: relative;
-  top: 500px;
   height: 350px;
   background-color: #1BA39C;
 }
 @media (max-width: 500px) {
-  .main {
-    top: 0;
-    margin-top: 0;
+  .main .mission-statement {
     height: 500px;
   }
 }
-.main article {
+.main .mission-statement article {
   width: 60%;
   margin: auto;
   padding: 2rem;
@@ -500,12 +507,12 @@ a {
   flex-wrap: wrap;
   color: #fff;
 }
-.main article p {
+.main .mission-statement article p {
   line-height: 1.5;
   text-align: justify;
   padding-top: 2rem;
 }
-.main article .get-started {
+.main .mission-statement article .get-started {
   margin-top: 4rem;
   width: 180px;
   height: 57px;
@@ -520,15 +527,177 @@ a {
   text-transform: uppercase;
   transition: all 0.25s ease-in-out;
 }
-.main article .get-started:hover {
+.main .mission-statement article .get-started:hover {
   background: #333333;
   border: 2px solid #fff;
   color: #fff;
   transition: all 0.25s ease-in-out;
 }
 @media (max-width: 500px) {
-  .main article {
+  .main .mission-statement article {
     width: 100%;
+  }
+}
+.main .services {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: auto;
+  padding: 4rem 0;
+  background-color: white;
+}
+.main .services h2 {
+  width: max-content;
+}
+.main .services h2 hr {
+  border-bottom: 2px solid #1BA39C;
+  height: 2px;
+}
+.main .services .services-container {
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  color: #686868;
+  margin: auto;
+}
+@media (max-width: 500px) {
+  .main .services .services-container {
+    width: 100%;
+    padding: 2rem;
+  }
+}
+.main .services .services-container .service {
+  width: 46%;
+  padding: 2rem;
+}
+@media (max-width: 500px) {
+  .main .services .services-container .service {
+    width: 100%;
+  }
+}
+.main .services .services-container .service article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.main .services .services-container .service article h3 {
+  color: #333333;
+  padding: 0.8rem;
+  text-align: center;
+}
+.main .services .services-container .service article h3 i {
+  color: #1BA39C;
+}
+.main .services .services-container .service article p {
+  line-height: 2;
+  position: relative;
+  margin: 2em auto;
+  width: 100%;
+  max-height: 100px;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+  text-align: justify;
+}
+.main .services .services-container .service article p.show-all {
+  max-height: 100%;
+}
+.main .services .services-container .service .learn-more {
+  font-size: 2rem;
+  padding: 0.8rem 1rem;
+  border: 2px solid #1BA39C;
+  background: white;
+  border-radius: 6px;
+  color: #1BA39C;
+  -webkit-transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
+  -ms-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+.main .services .services-container .service .learn-more:hover {
+  border: 2px solid #1BA39C;
+  background: #1BA39C;
+  color: white;
+  -webkit-transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
+  -ms-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+.main .testimonials {
+  background: #1BA39C;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 4rem 1rem;
+  color: #e6e6e6;
+}
+.main .testimonials h2 {
+  padding: 2rem 0;
+  text-align: center;
+}
+.main .testimony-container {
+  width: 70%;
+}
+@media (max-width: 500px) {
+  .main .testimony-container {
+    width: 100%;
+  }
+}
+.main .testimony-container .testimony {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  margin: 4rem auto;
+  border: 1px solid #a6a8a8;
+  padding: 2rem;
+  border-radius: 6px;
+}
+@media (max-width: 500px) {
+  .main .testimony-container .testimony {
+    flex-direction: column;
+    margin: 2rem auto;
+    padding: 2rem;
+  }
+  .main .testimony-container .testimony:not(.reverse) {
+    flex-direction: column-reverse;
+  }
+}
+.main .testimony-container .testimony .text-box {
+  width: 80%;
+}
+@media (max-width: 500px) {
+  .main .testimony-container .testimony .text-box {
+    width: 100%;
+  }
+}
+.main .testimony-container .testimony .text-box p {
+  line-height: 1.5;
+  text-align: justify;
+}
+.main .testimony-container .testimony .text-box p.author {
+  margin-top: 2rem;
+  font-style: italic;
+  text-decoration: underline;
+}
+.main .testimony-container .testimony img {
+  border-radius: 50%;
+  border: 4px solid #a6a8a8;
+}
+@media (max-width: 500px) {
+  .main .testimony-container .testimony img {
+    margin-bottom: 1rem;
   }
 }
 /* My styles starts here */

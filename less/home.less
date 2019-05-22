@@ -1,32 +1,186 @@
 .main {
-  .flex();
-  flex-wrap: nowrap;
   position: relative;
-  top: 500px;
-  height: 350px;
+  top     : 500px;
+
   @media @mobile {
-    top: 0;
+    top       : 0;
     margin-top: 0;
-    height: 500px;
   }
-  background-color: @primary;
-  article {
-    width: 60%;
-    margin: auto;
-    padding: 2rem;
-    .flex(column);
-    color: @white;
-    p{
-      line-height: 1.5;
-      text-align: justify;
-      padding-top: 2rem;
+
+  .mission-statement {
+    .flex();
+    flex-wrap       : nowrap;
+    height          : 350px;
+    background-color: @primary;
+
+    @media @mobile {
+      height: 500px;
     }
-    .get-started {
-      .get-started();
-    };
-  
+
+    article {
+      width  : 60%;
+      margin : auto;
+      padding: 2rem;
+      .flex(column);
+      color: @white;
+
+      p {
+        line-height: 1.5;
+        text-align : justify;
+        padding-top: 2rem;
+      }
+
+      .get-started {
+        .get-started();
+      }
+
+      @media @mobile {
+        width: 100%;
+      }
+    }
+  }
+
+  .services {
+    display         : flex;
+    flex-direction  : column;
+    justify-content : center;
+    align-items     : center;
+    width           : 100%;
+    margin          : auto;
+    padding         : 4rem 0;
+    background-color: white;
+
+    h2 {
+      width: max-content;
+
+      hr {
+        border-bottom: 2px solid @primary;
+        height       : 2px;
+      }
+    }
+
+    .services-container {
+      width: 70%;
+      .flex(row, space-between, center);
+      color: @gray-text;
+
+      @media @mobile {
+        width  : 100%;
+        padding: 2rem;
+      }
+
+      margin: auto;
+
+      .service {
+        width  : 46%;
+        padding: 2rem;
+
+        @media @mobile {
+          width: 100%;
+        }
+
+        article {
+          .flex(column);
+
+          h3 {
+            color     : @black;
+            padding   : 0.8rem;
+            text-align: center;
+
+            i {
+              color: @primary;
+            }
+          }
+
+          p {
+            line-height: 2;
+            position   : relative;
+            margin     : 2em auto;
+            width      : 100%;
+            max-height : 100px;
+            overflow   : hidden;
+            transition : max-height .5s ease;
+            text-align : justify;
+            &.show-all {
+              max-height: 100%;
+            }
+          }
+        }
+
+        .learn-more {
+          // position  : absolute;
+          // bottom    : -1rem;
+          // z-index   : 100;
+          // text-align: center;
+          font-size: 2rem;
+          padding: 0.8rem 1rem;
+          border: 2px solid @primary;
+          background: white;
+          border-radius: 6px;
+          color: @primary;
+          .transition();
+          &:hover {
+            border: 2px solid @primary;
+            background: @primary;
+            color: white;
+            .transition();
+          }
+        }
+      }
+    }
+  }
+  .testimonials {
+    background: @primary;
+    .flex(column);
+    padding: 4rem 1rem;
+    color: darken(@white, 10%);
+    h2 {
+      padding: 2rem 0;
+      text-align: center;
+    }
+  }
+  .testimony-container {
+    width: 70%;
     @media @mobile {
       width: 100%;
+    }
+    .testimony {
+      .flex(row, space-between, center, nowrap);
+      margin: 4rem auto;
+      border: 1px solid @silver-text;
+      padding: 2rem;
+      border-radius: 6px;
+      @media @mobile {
+        flex-direction: column;
+        &:not(.reverse) {
+          flex-direction: column-reverse;
+        }
+        margin: 2rem auto;
+        padding: 2rem;
+      }
+      
+      .text-box {
+        width: 80%;
+        @media @mobile {
+          width: 100%;
+        }
+        p {
+          line-height: 1.5;
+          text-align: justify;
+          &.author {
+            margin-top: 2rem;
+            font-style: italic;
+            text-decoration: underline;
+          }
+        }
+      }
+      img {
+        border-radius: 50%;
+        border: 4px solid @silver-text;
+        @media @mobile {
+          margin-bottom: 1rem;
+        }
+      }
     }
   }
 }

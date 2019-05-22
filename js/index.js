@@ -93,3 +93,45 @@ class NavComponent {
     return container;
   }
 }
+
+class Services {
+  constructor(domEl) {
+    this.element = domEl;
+    this.toggleParagraph()
+    this.animateIcon()
+  }
+  toggleParagraph = () => {
+    const services = this.element.querySelectorAll('.service');
+    services.forEach(service => {
+      const pa = service.querySelector('p');
+      const btn = service.querySelector('.learn-more');
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        pa.classList.toggle('show-all');
+        this.toggleText(btn)
+      })
+    })
+  }
+  toggleText = (btn) => {
+    if (btn.textContent === 'More...') {
+      btn.textContent = 'Less...'
+    } else {
+      btn.textContent = 'More...'
+    }
+  }
+  animateIcon = () => {
+    const icons = this.element.querySelectorAll('.fas');
+    icons.forEach(icon => {
+      icon.addEventListener('mouseenter', () => {
+        TweenLite.to(icon, 1, { rotation: -360});
+      })
+      icon.addEventListener('mouseleave', () => {
+        TweenLite.to(icon, 1, { rotation: 360, duration: Infinity});
+      })
+    })
+  }
+}
+
+const el = document.querySelector('.services-container');
+
+new Services(el);
