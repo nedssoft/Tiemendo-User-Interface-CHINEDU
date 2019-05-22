@@ -301,6 +301,11 @@ a {
     width: 100%;
   }
 }
+@media (max-width: 960px) {
+  .navigation .navbar .nav-items {
+    right: 20px;
+  }
+}
 .navigation .navbar .nav-items li {
   padding: 0.8rem 2rem;
 }
@@ -340,6 +345,7 @@ a {
 }
 .navigation .navbar .nav-items.open {
   display: flex;
+  transition: 2s ease-in-out;
 }
 .carousel {
   width: 100%;
@@ -352,6 +358,12 @@ a {
   position: fixed;
   overflow: hidden;
   top: 72px;
+}
+@media (max-width: 968px) {
+  .carousel {
+    top: 0;
+    height: 500px;
+  }
 }
 @media (max-width: 500px) {
   .carousel {
@@ -512,6 +524,22 @@ a {
   text-align: justify;
   padding-top: 2rem;
 }
+.main .mission-statement article h2 {
+  position: relative;
+  padding-bottom: 2rem;
+}
+.main .mission-statement article h2::after {
+  content: '';
+  position: absolute;
+  height: 2px;
+  width: 30%;
+  background-color: #fff;
+  bottom: 0;
+  right: 30%;
+}
+.main .mission-statement article h2:hover {
+  color: #a6a8a8;
+}
 .main .mission-statement article .get-started {
   margin-top: 4rem;
   width: 180px;
@@ -549,11 +577,25 @@ a {
   background-color: white;
 }
 .main .services h2 {
-  width: max-content;
+  position: relative;
+  padding-bottom: 2rem;
 }
-.main .services h2 hr {
-  border-bottom: 2px solid #1BA39C;
+.main .services h2::after {
+  content: '';
+  position: absolute;
   height: 2px;
+  width: 30%;
+  background-color: #1BA39C;
+  bottom: 0;
+  right: 40%;
+}
+.main .services h2:hover {
+  color: #1BA39C;
+  -webkit-transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
+  -ms-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
+  transition: all 0.25s ease;
 }
 .main .services .services-container {
   width: 70%;
@@ -591,6 +633,25 @@ a {
   color: #333333;
   padding: 0.8rem;
   text-align: center;
+  position: relative;
+  padding-bottom: 1rem;
+}
+.main .services .services-container .service article h3::after {
+  content: '';
+  position: absolute;
+  height: 2px;
+  width: 30%;
+  background-color: #1BA39C;
+  bottom: 0;
+  right: 20px;
+}
+.main .services .services-container .service article h3:hover {
+  color: #1BA39C;
+  -webkit-transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
+  -ms-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
+  transition: all 0.25s ease;
 }
 .main .services .services-container .service article h3 i {
   color: #1BA39C;
@@ -644,6 +705,24 @@ a {
 .main .testimonials h2 {
   padding: 2rem 0;
   text-align: center;
+  position: relative;
+}
+.main .testimonials h2::after {
+  content: '';
+  position: absolute;
+  height: 2px;
+  width: 30%;
+  background-color: #fff;
+  bottom: 0;
+  right: 30%;
+}
+.main .testimonials h2:hover {
+  color: #a6a8a8;
+  -webkit-transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
+  -ms-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
+  transition: all 0.25s ease;
 }
 .main .testimony-container {
   width: 70%;
@@ -700,6 +779,9 @@ a {
     margin-bottom: 1rem;
   }
 }
+.main .testimony-container .testimony img:hover {
+  transform: rotate(45deg);
+}
 footer {
   width: 100%;
   min-height: 150px;
@@ -755,6 +837,13 @@ footer p {
   clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
   color: #fff;
 }
+@media (max-width: 968px) {
+  .about-container {
+    top: 72px;
+    clip-path: none;
+    width: 100%;
+  }
+}
 @media (max-width: 500px) {
   .about-container {
     top: 0;
@@ -796,14 +885,23 @@ footer p {
 @media (max-width: 500px) {
   .about-container .about-section .about-content .profile {
     width: 100%;
-    margin: 0;
+    margin: 3rem 0;
   }
 }
 .about-container .about-section .about-content .profile h2 {
   margin: 1rem auto;
   padding: 0.8rem 1rem;
-  border-bottom: 1px solid #fff;
   font-size: 3rem;
+  position: relative;
+}
+.about-container .about-section .about-content .profile h2::after {
+  position: absolute;
+  content: '';
+  height: 3px;
+  width: 56px;
+  bottom: 0;
+  left: 20px;
+  background-color: #fff;
 }
 .about-container .about-section .about-content .profile .about-card {
   width: 350px;
@@ -849,6 +947,7 @@ footer p {
   color: white;
   text-align: center;
   font-size: 2.5rem;
+  padding: 2rem;
 }
 .about-container .about-section .about-content .profile .about-card .card-content .social {
   margin-top: 2rem;
@@ -895,9 +994,18 @@ footer p {
   font-size: 3rem;
   margin-bottom: 4rem;
   padding-bottom: 1rem;
-  border-bottom: 1px solid white;
   font-weight: bold;
   text-align: center;
+  position: relative;
+}
+.about-container h1::after {
+  content: '';
+  position: absolute;
+  height: 3px;
+  width: 60px;
+  background-color: #fff;
+  bottom: 0;
+  left: 20px;
 }
 .about-container article {
   margin-bottom: 3rem;

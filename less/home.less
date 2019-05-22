@@ -1,22 +1,18 @@
 .main {
   position: relative;
   top     : 500px;
-
   @media @mobile {
     top       : 0;
     margin-top: 0;
   }
-
   .mission-statement {
     .flex();
     flex-wrap       : nowrap;
     height          : 350px;
     background-color: @primary;
-
     @media @mobile {
       height: 500px;
     }
-
     article {
       width  : 60%;
       margin : auto;
@@ -28,6 +24,23 @@
         line-height: 1.5;
         text-align : justify;
         padding-top: 2rem;
+      }
+
+      h2 {
+        position: relative;
+        padding-bottom: 2rem;
+        &::after {
+          content         : '';
+          position        : absolute;
+          height          : 2px;
+          width           : 30%;
+          background-color: @white;
+          bottom          : 0;
+          right           : 30%;
+        }
+        &:hover {
+          color: @silver-text;
+        }
       }
 
       .get-started {
@@ -51,11 +64,22 @@
     background-color: white;
 
     h2 {
-      width: max-content;
+      position      : relative;
+      padding-bottom: 2rem;
 
-      hr {
-        border-bottom: 2px solid @primary;
-        height       : 2px;
+      &::after {
+        content         : '';
+        position        : absolute;
+        height          : 2px;
+        width           : 30%;
+        background-color: @primary;
+        bottom          : 0;
+        right           : 40%;
+      }
+
+      &:hover {
+        color: @primary;
+        .transition();
       }
     }
 
@@ -83,9 +107,26 @@
           .flex(column);
 
           h3 {
-            color     : @black;
-            padding   : 0.8rem;
-            text-align: center;
+            color         : @black;
+            padding       : 0.8rem;
+            text-align    : center;
+            position      : relative;
+            padding-bottom: 1rem;
+
+            &::after {
+              content         : '';
+              position        : absolute;
+              height          : 2px;
+              width           : 30%;
+              background-color: @primary;
+              bottom          : 0;
+              right           : 20px;
+            }
+
+            &:hover {
+              color: @primary;
+              .transition();
+            }
 
             i {
               color: @primary;
@@ -101,6 +142,7 @@
             overflow   : hidden;
             transition : max-height .5s ease;
             text-align : justify;
+
             &.show-all {
               max-height: 100%;
             }
@@ -108,77 +150,105 @@
         }
 
         .learn-more {
-          // position  : absolute;
-          // bottom    : -1rem;
-          // z-index   : 100;
-          // text-align: center;
-          font-size: 2rem;
-          padding: 0.8rem 1rem;
-          border: 2px solid @primary;
-          background: white;
+          font-size    : 2rem;
+          padding      : 0.8rem 1rem;
+          border       : 2px solid @primary;
+          background   : white;
           border-radius: 6px;
-          color: @primary;
+          color        : @primary;
           .transition();
+
           &:hover {
-            border: 2px solid @primary;
+            border    : 2px solid @primary;
             background: @primary;
-            color: white;
+            color     : white;
             .transition();
           }
         }
       }
     }
   }
+
   .testimonials {
     background: @primary;
     .flex(column);
     padding: 4rem 1rem;
-    color: darken(@white, 10%);
+    color  : darken(@white, 10%);
+
     h2 {
-      padding: 2rem 0;
+      padding   : 2rem 0;
       text-align: center;
+      position  : relative;
+
+      &::after {
+        content         : '';
+        position        : absolute;
+        height          : 2px;
+        width           : 30%;
+        background-color: @white;
+        bottom          : 0;
+        right           : 30%;
+      }
+
+      &:hover {
+        color: @silver-text;
+        .transition();
+      }
     }
   }
+
   .testimony-container {
     width: 70%;
+
     @media @mobile {
       width: 100%;
     }
+
     .testimony {
       .flex(row, space-between, center, nowrap);
-      margin: 4rem auto;
-      border: 1px solid @silver-text;
-      padding: 2rem;
+      margin       : 4rem auto;
+      border       : 1px solid @silver-text;
+      padding      : 2rem;
       border-radius: 6px;
+
       @media @mobile {
         flex-direction: column;
+
         &:not(.reverse) {
           flex-direction: column-reverse;
         }
-        margin: 2rem auto;
+
+        margin : 2rem auto;
         padding: 2rem;
       }
-      
+
       .text-box {
         width: 80%;
+
         @media @mobile {
           width: 100%;
         }
+
         p {
           line-height: 1.5;
-          text-align: justify;
+          text-align : justify;
+
           &.author {
-            margin-top: 2rem;
-            font-style: italic;
+            margin-top     : 2rem;
+            font-style     : italic;
             text-decoration: underline;
           }
         }
       }
       img {
         border-radius: 50%;
-        border: 4px solid @silver-text;
+        border       : 4px solid @silver-text;
+
         @media @mobile {
           margin-bottom: 1rem;
+        }
+        &:hover {
+          transform: rotate(45deg);
         }
       }
     }

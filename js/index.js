@@ -1,4 +1,5 @@
 
+TweenLite.defaultEase = Expo.easeOut;
 class NavComponent {
   constructor(navData, rootEl) {
     this.data = navData;
@@ -67,6 +68,7 @@ class Services {
     this.element = domEl;
     this.toggleParagraph()
     this.animateIcon()
+    this.animateBtn()
   }
   toggleParagraph = () => {
     const services = this.element.querySelectorAll('.service');
@@ -75,8 +77,20 @@ class Services {
       const btn = service.querySelector('.learn-more');
       btn.addEventListener('click', (e) => {
         e.preventDefault();
-        pa.classList.toggle('show-all');
+        const height = getComputedStyle(pa).getPropertyValue('max-height');
+        if (height == '100px') {
+          TweenMax.fromTo(pa, 0.2, { maxHeight: "100px", opacity: 0.5, y: 100}, { maxHeight: "100%", opacity: 1, y: 0, yoyo: true});
+        } 
+        if (height == '100%') {
+          TweenMax.fromTo(pa, 0.1, { maxHeight: "100%", opacity: 0.5, y: -100}, { maxHeight: "100px", opacity: 1, y:0, yoyo: true});
+        }
         this.toggleText(btn)
+    
+        if(btn.getAttribute('aria-expanded') === "true") {
+          btn.setAttribute('aria-expanded', false);
+        } else {
+          btn.setAttribute('aria-expanded', true)
+        }
       })
     })
   }
@@ -98,8 +112,17 @@ class Services {
       })
     })
   }
+
+  animateBtn = () => {
+    const buttons = this.element.querySelectorAll('.learn-more');
+    buttons.forEach(btn => {
+      btn.addEventListener('mouseover', () => {
+        TweenLite.fromTo(btn, 0.5, {x: -10}, { x: 0, yoyo: true});
+      })
+    })
+  }
 }
 
 const el = document.querySelector('.services-container');
-
 new Services(el);
+

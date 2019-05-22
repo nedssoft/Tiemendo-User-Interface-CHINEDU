@@ -1,4 +1,4 @@
-
+TweenLite.defaultEase = Expo.easeOut;
 const teamProfile = [
   {
     name: "Sorin Chis",
@@ -72,11 +72,11 @@ class About {
       card.addEventListener('mouseenter', () => {
 
         TweenMax.fromTo(content, .2, { width: 0 }, { width: '100%', height: "100%", display: "flex" });
-        TweenMax.fromTo(h3, .2, { x: -100, border: "0px solid #fff", }, { x: 50, borderRadius: 5, border: "4px solid #fff", ease: Bounce.easeOut});
+        TweenMax.fromTo(h3, .2, { x: -100 }, { x: 50, ease: Bounce.easeOut});
       })
       card.addEventListener('mouseleave', () => {
-        TweenMax.fromTo(content, .2, { width: "100%", border: "4px solid #fff" }, { width: '1px', display: "none", border: "1px solid #fff" });
-        TweenMax.fromTo(h3, .2, { x: 50, border: "4px solid #fff" }, { x: 0, borderRadius: 5, border: "1px solid #fff" });
+        TweenMax.fromTo(content, .2, { width: "100%"}, { width: '1px', display: "none" });
+        TweenMax.fromTo(h3, .2, { x: 50}, { x: 0 });
       })
     })
   }
@@ -88,6 +88,7 @@ class About {
     const cardContent = this.createElement('div', 'card-content')
     const h3 = document.createElement('h2');
     h3.textContent = this.data.name;
+    profile.setAttribute('data-aos', 'flip-up')
     profile.appendChild(aboutCard);
     profile.appendChild(h3);
     cardContent.appendChild(this.constructParagraph());
