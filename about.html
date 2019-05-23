@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="description" content="Tieme Ndo is a platform that allows farmers to access loans and improved farm inputs without initial capital">
-  <base target="_blank">
   <title>Tieme Ndo</title>
   <link href='http://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800' rel='stylesheet'
     type='text/css'>
@@ -16,32 +15,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <link rel="stylesheet" href="css/index.css">
-  <script defer src="js/about.js"></script>
-  <script defer src="js/navigation.js"></script>
+  <script defer src="components/about/about.js"></script>
+  <script defer src="components/navigation/navigation.js"></script>
+  <script defer src="components/footer/footer.js"></script>
 </head>
 
 <body>
   <div class="container">
-    <header class="navigation" role="navigation">
-      <nav class="navbar">
-        <div class="nav-header">
-          <div class="logo">
-            <h1><a href="#">Tieme Ndo</a></h1>
-          </div>
-          <div class="nav-toggle">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-          </div>
-        </div>
-        <ul class="nav-items">
-          <li><a href="index.html">Home</a></li>
-          <li class="active"><a href="about.html">About</a></li>
-          <li><a href="/login">Get Started</a></li>
-        </ul>
-      </nav>
-    </header>
-    <main>
       <div class="about-container">
         <section class="about-section">
           <h1>Meet Our Awesome Team</h1>
@@ -55,14 +35,8 @@
           </div>
         </section>
       </div>
-    </main>
     <footer>
-      <ul class="social">
-        <li><a href="#"><i class="fab fa-facebook facebook"></i></a></li>
-        <li><a href="#"><i class="fab fa-linkedin linkedin"></i></a></li>
-        <li><a href="#"><i class="fab fa-twitter twitter"></i></a></li>
-      </ul>
-      <p> &copy; Copyright Lambda School. All Rights Reserved.</p>
+      
     </footer>
     <script>
         AOS.init();

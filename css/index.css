@@ -825,54 +825,6 @@ a {
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
 }
-footer {
-  width: 100%;
-  min-height: 150px;
-  background: #333333;
-  padding: 2rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  color: #a6a8a8;
-}
-footer .social {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-}
-footer .social li a i {
-  font-size: 6rem;
-  color: #a6a8a8;
-  padding: 2rem;
-  -webkit-transition: all 0.25s ease;
-  -moz-transition: all 0.25s ease;
-  -ms-transition: all 0.25s ease;
-  -o-transition: all 0.25s ease;
-  transition: all 0.25s ease;
-}
-footer .social li a i.twitter:hover {
-  color: #29AAE1;
-  -webkit-transition: 0.5s ease-in-out;
-  transition: 0.5s ease-in-out;
-}
-footer .social li a i.facebook:hover {
-  color: #3B579D;
-  -webkit-transition: 0.5s ease-in-out;
-  transition: 0.5s ease-in-out;
-}
-footer .social li a i.linkedin:hover {
-  color: #0374B3;
-  -webkit-transition: 0.5s ease-in-out;
-  transition: 0.5s ease-in-out;
-}
-footer p {
-  margin: 2rem auto;
-  text-align: center;
-}
 .about-container {
   font-family: 'Work Sans', sans-serif;
   position: relative;
@@ -1144,5 +1096,53 @@ footer p {
   to {
     color: #0374B3;
   }
+}
+footer {
+  width: 100%;
+  min-height: 150px;
+  background: #333333;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  color: #a6a8a8;
+}
+footer .social {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+footer .social li a i {
+  font-size: 6rem;
+  color: #a6a8a8;
+  padding: 2rem;
+  -webkit-transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
+  -ms-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+footer .social li a i.twitter:hover {
+  color: #29AAE1;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+footer .social li a i.facebook:hover {
+  color: #3B579D;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+footer .social li a i.linkedin:hover {
+  color: #0374B3;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+footer p {
+  margin: 2rem auto;
+  text-align: center;
 }
 /* My styles starts here */
