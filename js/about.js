@@ -20,7 +20,7 @@ const teamProfile = [
       { twitter: "chasegarsee" },
       { github: "chasegarsee" },
     ],
-    image: 'Chase Garsee.png'
+    image: 'Chase Garsee.jpg'
   },
   {
     name: "Anthony L. Johnson",
@@ -31,7 +31,7 @@ const teamProfile = [
       { twitter: "#" },
       { github: "#" },
     ],
-    image: 'Anthony L. Johnson.png'
+    image: 'Anthony L. Johnson.jpg'
   },
   {
     name: "Vladislav Mogilevskiy",
@@ -42,7 +42,7 @@ const teamProfile = [
       { twitter: "#" },
       { github: "#" },
     ],
-    image: 'Vladislav Mogilevskiy.png'
+    image: 'Vladislav Mogilevskiy.jpg'
   },
   {
     name: "Chinedu Orie",
@@ -72,11 +72,11 @@ class About {
       card.addEventListener('mouseenter', () => {
 
         TweenMax.fromTo(content, .2, { width: 0 }, { width: '100%', height: "100%", display: "flex" });
-        TweenMax.fromTo(h3, .2, { x: -100 }, { x: 50, ease: Bounce.easeOut});
+        TweenMax.fromTo(h3, .2, { x: -100 }, { x: 50, ease: Bounce.easeOut });
       })
       card.addEventListener('mouseleave', () => {
-        TweenMax.fromTo(content, .2, { width: "100%"}, { width: '1px', display: "none" });
-        TweenMax.fromTo(h3, .2, { x: 50}, { x: 0 });
+        TweenMax.fromTo(content, .2, { width: "100%" }, { width: '1px', display: "none" });
+        TweenMax.fromTo(h3, .2, { x: 50 }, { x: 0 });
       })
     })
   }
@@ -141,3 +141,4 @@ class About {
 teamProfile.forEach((profile) => {
   new About(profile)
 })
+

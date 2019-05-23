@@ -156,11 +156,13 @@ body {
   font-family: "Open Sans", Calibri, sans-serif;
 }
 html {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 *,
 *:before,
 *:after {
+  -webkit-box-sizing: inherit;
   box-sizing: inherit;
 }
 h1,
@@ -199,10 +201,12 @@ a {
 }
 .navigation {
   width: 100%;
+  -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
   position: fixed;
   z-index: 1000;
   top: 0;
+  -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
 }
 @media (max-width: 500px) {
@@ -228,6 +232,7 @@ a {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    -ms-flex-wrap: nowrap;
     flex-wrap: nowrap;
     height: 100%;
   }
@@ -245,6 +250,8 @@ a {
   .navigation .navbar .nav-header {
     position: relative;
     left: 0;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
     width: 100%;
     padding: 2rem;
@@ -270,6 +277,8 @@ a {
 }
 @media (max-width: 500px) {
   .navigation .navbar .nav-header .nav-toggle {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
   }
 }
@@ -344,7 +353,10 @@ a {
   color: #1BA39C;
 }
 .navigation .navbar .nav-items.open {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-transition: 2s ease-in-out;
   transition: 2s ease-in-out;
 }
 .carousel {
@@ -386,6 +398,7 @@ a {
   position: absolute;
   width: 50px;
   height: 50px;
+  -webkit-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
   cursor: pointer;
 }
@@ -400,16 +413,19 @@ a {
   color: #fff;
   background-color: #333333;
   border: 2px solid #fff;
+  -webkit-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
 }
 .carousel .left-button {
   top: 50%;
   left: 25px;
+  -webkit-transform: translate(0, -50%);
   transform: translate(0, -50%);
 }
 .carousel .right-button {
   top: 50%;
   right: 25px;
+  -webkit-transform: translate(0, -50%);
   transform: translate(0, -50%);
 }
 .carousel .carousel-item {
@@ -421,8 +437,11 @@ a {
 }
 .carousel .carousel-item img {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  object-fit: contain;
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 @media (max-width: 500px) {
   .carousel .carousel-item img {
@@ -459,8 +478,12 @@ a {
   font-size: 2rem;
   line-height: 1.2;
   font-weight: 400;
-  text-shadow: 1px 1px 3px #666666;
   color: white;
+  text-align: center;
+}
+.carousel .carousel-item .carousel-text p:nth-of-type(2),
+.carousel .carousel-item .carousel-text p:nth-of-type(6) {
+  color: #333333;
 }
 .carousel .carousel-item .carousel-text .get-started {
   margin-top: 4rem;
@@ -475,12 +498,14 @@ a {
   color: #1BA39C;
   border-radius: 6px;
   text-transform: uppercase;
+  -webkit-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
 }
 .carousel .carousel-item .carousel-text .get-started:hover {
   background: #333333;
   border: 2px solid #fff;
   color: #fff;
+  -webkit-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
 }
 .main {
@@ -499,6 +524,7 @@ a {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   height: 350px;
   background-color: #1BA39C;
@@ -567,9 +593,18 @@ a {
   }
 }
 .main .services {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   width: 100%;
   margin: auto;
@@ -663,6 +698,7 @@ a {
   width: 100%;
   max-height: 100px;
   overflow: hidden;
+  -webkit-transition: max-height 0.5s ease;
   transition: max-height 0.5s ease;
   text-align: justify;
 }
@@ -745,11 +781,17 @@ a {
 }
 @media (max-width: 500px) {
   .main .testimony-container .testimony {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     margin: 2rem auto;
     padding: 2rem;
   }
   .main .testimony-container .testimony:not(.reverse) {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
     flex-direction: column-reverse;
   }
 }
@@ -780,6 +822,7 @@ a {
   }
 }
 .main .testimony-container .testimony img:hover {
+  -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 footer {
@@ -813,14 +856,17 @@ footer .social li a i {
 }
 footer .social li a i.twitter:hover {
   color: #29AAE1;
+  -webkit-transition: 0.5s ease-in-out;
   transition: 0.5s ease-in-out;
 }
 footer .social li a i.facebook:hover {
   color: #3B579D;
+  -webkit-transition: 0.5s ease-in-out;
   transition: 0.5s ease-in-out;
 }
 footer .social li a i.linkedin:hover {
   color: #0374B3;
+  -webkit-transition: 0.5s ease-in-out;
   transition: 0.5s ease-in-out;
 }
 footer p {
@@ -840,6 +886,7 @@ footer p {
 @media (max-width: 968px) {
   .about-container {
     top: 72px;
+    -webkit-clip-path: none;
     clip-path: none;
     width: 100%;
   }
@@ -847,6 +894,7 @@ footer p {
 @media (max-width: 500px) {
   .about-container {
     top: 0;
+    -webkit-clip-path: none;
     clip-path: none;
     width: 100%;
     margin: 0;
@@ -858,6 +906,7 @@ footer p {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   padding: 4rem 2rem;
 }
@@ -912,10 +961,12 @@ footer p {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  -webkit-box-shadow: 0px 3px 5px 1px rgba(48, 37, 37, 0.459);
   box-shadow: 0px 3px 5px 1px rgba(48, 37, 37, 0.459);
   border-radius: 6px;
   background-repeat: no-repeat;
   background-size: 100% 100%;
+  -webkit-transition: 0.2s ease-in-out;
   transition: 0.2s ease-in-out;
 }
 @media (max-width: 500px) {
@@ -925,7 +976,9 @@ footer p {
   }
 }
 .about-container .about-section .about-content .profile .about-card:hover {
+  -webkit-transform: scale(1.03, 1);
   transform: scale(1.03, 1);
+  -webkit-transition: 0.2s ease-in-out;
   transition: 0.2s ease-in-out;
 }
 .about-container .about-section .about-content .profile .about-card .card-content {
@@ -972,22 +1025,30 @@ footer p {
 }
 .about-container .about-section .about-content .profile .about-card .card-content .social ul li a i.twitter:hover {
   color: #29AAE1;
+  -webkit-transition: 0.5s ease-in-out;
   transition: 0.5s ease-in-out;
+  -webkit-animation: twitter 1s infinite;
   animation: twitter 1s infinite;
 }
 .about-container .about-section .about-content .profile .about-card .card-content .social ul li a i.facebook:hover {
   color: #3B579D;
+  -webkit-transition: 0.5s ease-in-out;
   transition: 0.5s ease-in-out;
+  -webkit-animation: facebook 1s infinite;
   animation: facebook 1s infinite;
 }
 .about-container .about-section .about-content .profile .about-card .card-content .social ul li a i.linkedin:hover {
   color: #0374B3;
+  -webkit-transition: 0.5s ease-in-out;
   transition: 0.5s ease-in-out;
+  -webkit-animation: linkedin 1s infinite;
   animation: linkedin 1s infinite;
 }
 .about-container .about-section .about-content .profile .about-card .card-content .social ul li a i.github:hover {
   color: #161515;
+  -webkit-transition: 0.5s ease-in-out;
   transition: 0.5s ease-in-out;
+  -webkit-animation: github 1s infinite;
   animation: github 1s infinite;
 }
 .about-container h1 {
@@ -1020,12 +1081,28 @@ footer p {
     text-align: justify;
   }
 }
+@-webkit-keyframes facebook {
+  from {
+    color: white;
+  }
+  to {
+    color: #3B579D;
+  }
+}
 @keyframes facebook {
   from {
     color: white;
   }
   to {
     color: #3B579D;
+  }
+}
+@-webkit-keyframes twitter {
+  from {
+    color: white;
+  }
+  to {
+    color: #29AAE1;
   }
 }
 @keyframes twitter {
@@ -1036,12 +1113,28 @@ footer p {
     color: #29AAE1;
   }
 }
+@-webkit-keyframes github {
+  from {
+    color: white;
+  }
+  to {
+    color: #161515;
+  }
+}
 @keyframes github {
   from {
     color: white;
   }
   to {
     color: #161515;
+  }
+}
+@-webkit-keyframes linkedin {
+  from {
+    color: white;
+  }
+  to {
+    color: #0374B3;
   }
 }
 @keyframes linkedin {
