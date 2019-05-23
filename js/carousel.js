@@ -6,6 +6,7 @@ class Carousel {
       this.currentItem = 0;
       this.initCarousel()
       this.autoShowCarousel()
+      
   }
   initCarousel = () => {
       this.setItem(this.currentItem)
@@ -15,6 +16,7 @@ class Carousel {
       leftBtn.addEventListener('click', this.prevItem)
   }
   nextItem = () => {
+    this.pauseTimer()
       if (this.currentItem === this.ItemCount -1) {
           this.currentItem = 0;
       } else {
@@ -23,6 +25,7 @@ class Carousel {
       this.setItem(this.currentItem)
   }
   prevItem = () => {
+    this.pauseTimer()
       if (this.currentItem > 0) {
           --this.currentItem
       } else {
@@ -39,7 +42,7 @@ class Carousel {
       TweenMax.fromTo(currentItem, 1, {opacity: 0.3}, {opacity: 1, display: "flex"});
   }
   autoShowCarousel = () => {
-      setInterval( () => {
+      this.timerId = setInterval( () => {
           if (this.currentItem === this.ItemCount - 1) {
               this.currentItem = 0;
           } else {
@@ -47,6 +50,22 @@ class Carousel {
           }
           this.setItem(this.currentItem)
       }, 5000) 
+  }
+
+  pauseTimer = () => {
+    clearInterval(this.timerId)
+    setTimeout(() => {
+        this.autoShowCarousel();
+    }, 10000);
+  }
+
+  pauseTimerOnHover = () => {
+      this.carouselItems.forEach(item => {
+          item.addEventListener('mouseenter', () => {
+              this.pauseTimer();
+              console.log('paused')
+          })
+      })
   }
 }
 let carousel = document.querySelector('.carousel');

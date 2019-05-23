@@ -1,5 +1,6 @@
 .navigation {
   .width-100();
+  -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
   position: fixed;
   z-index: 1000;
@@ -15,7 +16,8 @@
     position: relative;
     @media @mobile {
       .flex(column);
-      flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
       height   : 100%;
     }
     .nav-header {
@@ -25,7 +27,9 @@
       @media @mobile {
         position       : relative;
         left           : 0;
-        justify-content: space-between;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
         .width-100();
         padding: 2rem;
       }
@@ -40,6 +44,8 @@
           .width-100();
         }
         @media @mobile {
+          display: -webkit-box;
+          display: -ms-flexbox;
           display: flex;
         }
         border       : 1px solid @black;
@@ -97,13 +103,16 @@
         }
       }
       &.open {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-transition: 2s ease-in-out;
         transition: 2s ease-in-out;
       }
     }
   }
-  //   -webkit-box-shadow: 1px 4px 5px -3px rgba(166, 168, 168, 1);
-  //   -moz-box-shadow   : 1px 4px 5px -3px rgba(166, 168, 168, 1);
-  //   box-shadow        : 1px 4px 5px -3px rgba(166, 168, 168, 1);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
+
+  -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
+
+          box-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
 }

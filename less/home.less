@@ -7,7 +7,8 @@
   }
   .mission-statement {
     .flex();
-    flex-wrap       : nowrap;
+    -ms-flex-wrap       : nowrap;
+        flex-wrap       : nowrap;
     height          : 350px;
     background-color: @primary;
     @media @mobile {
@@ -18,7 +19,7 @@
       margin : auto;
       padding: 2rem;
       .flex(column);
-      color: @white;
+      color: #fff;
 
       p {
         line-height: 1.5;
@@ -54,10 +55,19 @@
   }
 
   .services {
+    display         : -webkit-box;
+    display         : -ms-flexbox;
     display         : flex;
-    flex-direction  : column;
-    justify-content : center;
-    align-items     : center;
+    -webkit-box-orient  : vertical;
+    -webkit-box-direction  : normal;
+        -ms-flex-direction  : column;
+            flex-direction  : column;
+    -webkit-box-pack : center;
+        -ms-flex-pack : center;
+            justify-content : center;
+    -webkit-box-align     : center;
+        -ms-flex-align     : center;
+            align-items     : center;
     width           : 100%;
     margin          : auto;
     padding         : 4rem 0;
@@ -140,6 +150,7 @@
             width      : 100%;
             max-height : 100px;
             overflow   : hidden;
+            -webkit-transition : max-height .5s ease;
             transition : max-height .5s ease;
             text-align : justify;
 
@@ -212,10 +223,16 @@
       border-radius: 6px;
 
       @media @mobile {
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
 
         &:not(.reverse) {
-          flex-direction: column-reverse;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: reverse;
+              -ms-flex-direction: column-reverse;
+                  flex-direction: column-reverse;
         }
 
         margin : 2rem auto;
@@ -248,7 +265,8 @@
           margin-bottom: 1rem;
         }
         &:hover {
-          transform: rotate(45deg);
+          -webkit-transform: rotate(45deg);
+                  transform: rotate(45deg);
         }
       }
     }
