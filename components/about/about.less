@@ -1,15 +1,10 @@
 .about-container {
   font-family      : 'Work Sans', sans-serif;
-  position         : relative;
-  top              : 72px;
-  margin-bottom    : 7.2rem;
   background-color : @primary;
   -webkit-clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
   clip-path        : polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
   color            : @white;
-
   @media (max-width: 968px) {
-    top      : 72px;
     -webkit-clip-path: none;
             clip-path: none;
     width    : 100%;
@@ -21,7 +16,6 @@
     width    : 100%;
     margin   : 0;
   }
-
   .about-section {
     .flex(column);
     -ms-flex-wrap: nowrap;
@@ -36,7 +30,6 @@
 
     .about-content {
       .flex();
-
       .profile {
         .flex(column);
         margin-top: 3rem;

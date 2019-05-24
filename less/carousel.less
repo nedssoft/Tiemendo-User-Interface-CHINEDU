@@ -1,22 +1,12 @@
 .carousel {
   .width-100();
   .flex();
-  height  : 500px;
-  position: fixed;
+  max-height  : 500px;
   overflow: hidden;
-  top     : 72px;
-
-  @media (max-width: 968px) {
-    top   : 0;
-    height: 500px;
-  }
-
+  position: relative;
   @media @mobile {
-    position: relative;
-    top     : 0;
     height  : 240px;
   }
-
   .left-button,
   .right-button {
     .flex();
@@ -44,49 +34,38 @@
       transition        : all 0.25s ease-in-out;
     }
   }
-
   .left-button {
     top              : 50%;
     left             : 25px;
     -webkit-transform: translate(0, -50%);
     transform        : translate(0, -50%);
   }
-
   .right-button {
     top              : 50%;
     right            : 25px;
     -webkit-transform: translate(0, -50%);
     transform        : translate(0, -50%);
   }
-
   .carousel-item {
+    height: 100%;
+    .flex(column);
     img {
       .width-100();
       display      : -webkit-box;
       display      : -ms-flexbox;
       display      : flex;
-      -o-object-fit: cover;
-      object-fit   : cover;
-
-      @media @mobile {
-        position: absolute;
-        top     : 0;
-      }
+      -o-object-fit: contain;
+      object-fit   : contain;
     }
-
-    .flex();
-
     .carousel-text {
-      position: absolute;
-      bottom  : 30%;
       .flex();
+      position: absolute;
+      top  : 30%;
       width: 70%;
       color: @silver-text;
-
       @media @mobile {
         display: none;
       }
-
       h1 {
         margin-bottom : 4rem;
         color         : @silver-text;
@@ -108,7 +87,6 @@
           color: @black;
         }
       }
-
       .get-started {
         margin-top        : 4rem;
         width             : 180px;
