@@ -3,7 +3,7 @@ TweenLite.defaultEase = Expo.easeOut;
 const navData = [
   {name: 'Home', link: 'index.html'},
   {name: 'About', link: 'about.html'},
-  {name: 'Login', link: '#'},
+  {name: 'Login', link: 'https://inspiring-neumann-c64c83.netlify.com/'},
  
 ];
 
